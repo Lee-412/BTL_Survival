@@ -10,6 +10,7 @@
 static const int SCREEN_WIDTH = 1200;
 static const int SCREEN_HEIGHT = 600;
 static const char* WINDOW_TITLE = "Tank_Ranarok";
+const int NUM_Threat=3;
 
 static SDL_Window* window;
 static SDL_Renderer* renderer;
