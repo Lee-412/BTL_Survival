@@ -12,6 +12,8 @@ int x; int y;
 int x_v[3]; int y_v[3];
 ThreatsObj* p_threat = new ThreatsObj();
 double dem;
+ ThreatsObj* p_threats= new ThreatsObj[NUM_Threat];
+
 SDL_Texture* SDLF::loadimage(const char*  file_path)
 {
     SDL_Texture* load_image = NULL;
@@ -80,29 +82,33 @@ void waitUntilKeyPressed()
     {
         SDL_RenderClear(renderer);
         SDLF::render(c_background);
-
         if ( SDL_PollEvent(&e) != 0 && (e.type == SDL_QUIT ) )
-              return ;
+            return ;
         else
         {
             charac_object.HandleInput(e);
             charac_object.Show(c_character,x,y);
             charac_object.Handlemove(x,y);
         }
-        p_threat->set_x_val(dem=dem+0.00005);
-        p_threat->set_y_val(dem=dem+0.00005);
-        for(int i=0; i<= 0; i++)
-            {
-                x_v[i]=p_threat->Getrect().x;
-                y_v[i]=p_threat->Getrect().y;
+        for(int tt=0; tt<NUM_Threat; tt++)
+        {
+            ThreatsObj* p_threat=(p_threats+tt);
+            p_threat->set_x_val(dem=dem+0.00005);
+            p_threat->set_y_val(dem=dem+0.00005);
+            for(int i=0; i<=0 ; i++)
+                {
+                    x_v[i]=p_threat->Getrect().x;
+                    y_v[i]=p_threat->Getrect().y;
+                }
+            if (x_v[0]==x && y_v[0]==y) return;
+            else{
+            p_threat->handlemove(SCREEN_WIDTH*0.5,SCREEN_HEIGHT*0.5);
+            p_threat->Showthr(c_threat,x_v[0],y_v[0]);
             }
-        p_threat->handlemove(SCREEN_WIDTH*0.5,SCREEN_HEIGHT*0.5);
-        p_threat->Showthr(c_threat,x_v[0],y_v[0]);
-        SDL_RenderPresent(renderer);
-        SDLF::render(c_background);
+        }
+    SDL_RenderPresent(renderer);    SDLF::render(c_background);
         SDL_Delay(8);
     }
-
 }
 int main(int argc, char** argv)
 {
@@ -112,15 +118,23 @@ int main(int argc, char** argv)
 
     c_background =SDLF::loadimage("map3.png");
     c_character=SDLF::loadimage("TANK1.png");
-    c_threat=SDLF::loadimage("TANK3.png");
-    charac_object.SetRect(0,600);
-    bool ret = charac_object.Loadimg("TANK1.png");
-    if (!ret){return 0;}
-    bool ret2= p_threat->Loadimg("TANK1.png");
-    if(ret2==false){return 0;}
-    p_threat->SetRect(SCREEN_WIDTH,SCREEN_HEIGHT*0.8);
 
-    waitUntilKeyPressed();
+    charac_object.SetRect(0,600);
+     bool ret = charac_object.Loadimg("TANK1.png");
+    if (!ret){return 0;}
+
+
+    for(int t=0; t<NUM_Threat; t++)
+    {
+        ThreatsObj* p_threat= (p_threats+t);
+        c_threat=SDLF::loadimage("TANK3.png");
+        bool ret2= p_threat->Loadimg("TANK3.png");
+        if(ret2==false){return 0;}
+        p_threat->SetRect(SCREEN_WIDTH+t*400,SCREEN_HEIGHT*0.8);
+
+
+    } waitUntilKeyPressed();
+
     INIT::quitSDL(window, renderer);
     return 0;
 }
