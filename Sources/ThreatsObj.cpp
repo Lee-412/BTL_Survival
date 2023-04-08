@@ -15,7 +15,8 @@ ThreatsObj::~ThreatsObj()
 }
 void ThreatsObj::handlemove(const int& x_bordr, const int& y_bordr)
 {
-    //x_val=rand()%(2*x_val+1)-x_val;
+    //x_val=rand()%(2*5+1)-5;
+    //y_val=rand()%(2*5+1)-5;
     rect_.x=rect_.x-x_val;
     rect_.y=rect_.y+y_val;
 

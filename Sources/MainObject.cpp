@@ -32,25 +32,25 @@ void MainObject::HandleInput(SDL_Event events)
         case SDLK_UP:
         {
             y_val = std::max(y_val - 3, MIN_SPEED);
-            std::cout<<y_val<<std::endl;
+           // std::cout<<y_val<<std::endl;
             break;
         }
         case SDLK_DOWN:
         {
             y_val = std::min(y_val + 3, MAX_SPEED);
-            std::cout<<y_val<<std::endl;
+            //std::cout<<y_val<<std::endl;
             break;
         }
         case SDLK_RIGHT:
         {
             x_val = std::min(x_val + 3, MAX_SPEED);
-            std::cout<<x_val<<std::endl;
+            //std::cout<<x_val<<std::endl;
             break;
         }
         case SDLK_LEFT:
         {
             x_val = std::max(x_val - 3, MIN_SPEED);
-            std::cout<<y_val<<std::endl;
+            //std::cout<<y_val<<std::endl;
             break;
         }
         /*case SDLK_w:
@@ -90,19 +90,19 @@ void MainObject::HandleInput(SDL_Event events)
             {
                 y_val+=3;
 
-                 std::cout<<y_val<<std::endl;
+                 //std::cout<<y_val<<std::endl;
                 break;
             }
             case SDLK_DOWN:
             {
                 y_val-=3;
-                std::cout<<y_val<<std::endl;
+                //std::cout<<y_val<<std::endl;
                 break;
             }
             case SDLK_RIGHT:
             {
                 x_val-=3;
-                std::cout<<x_val<<std::endl;
+                //std::cout<<x_val<<std::endl;
                 break;
             }
 
