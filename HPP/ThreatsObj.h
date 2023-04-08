@@ -5,8 +5,8 @@
 #include "ctime"
 #include <unistd.h>
 //#include <bits/stdc++.h>
-#define WIDTH_THREAT 64;
-#define HEIGHT_THREAT 91;
+#define WIDTH_THREAT 20;
+#define HEIGHT_THREAT 20;
 
 class ThreatsObj: public BaseObject
 {

@@ -5,7 +5,6 @@
 #include "init_clean.h"
 #include "BaseObject.h"
 
-
 static SDL_Texture* c_background= NULL;
 static SDL_Texture* c_character= NULL;
 static SDL_Texture* c_threat= NULL;
@@ -18,6 +17,7 @@ namespace SDLF
     SDL_Texture* loadimage(const char*  file_path);
     void renderchar(SDL_Texture* texture, int x, int y);
     void renderthr(SDL_Texture* texture, int x, int y);
+    bool CheckCollision(const SDL_Rect& object_1, const SDL_Rect& object2);
 }
 #endif
 
