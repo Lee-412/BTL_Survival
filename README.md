@@ -16,7 +16,7 @@
 •	Thao tác: các phím di chuyển 
 Up (lên) – Down (Xuống) – Left (trái) – Right (Phải) 
 
-•	Đặc biệt: Nhân vật sẽ tăng tốc độ khi va chạm với 4 mảng tường và bật lại, Lúc đấy di chuyển sẽ khó khăn hơn.
+•	Đặc biệt: Nhân vật sẽ tăng tốc độ khi va chạm với 4 mảng tường và bật lại, Tạo hiện tượng di chuyển sẽ khó khăn hơn.
 
 # Kĩ Thuật Sử Dụng
 
@@ -30,6 +30,7 @@ Up (lên) – Down (Xuống) – Left (trái) – Right (Phải)
 •	Kiến thức lập trình cơ bản: vector, rand,...
 
 •	Lập trình hướng đối tượng (OOP): class, đóng gói, kế thừa,..
+
 # Hướng dẫn cài đặt ( Bổ sung )
 
 # Nguồn tham khảo
