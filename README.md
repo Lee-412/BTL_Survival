@@ -40,3 +40,15 @@ Up (lên) – Down (Xuống) – Left (trái) – Right (Phải)
 •	OOP: Giáo trình OOP, Google.
 
 •	Tài liệu tham khảo và học tập: Phát Triển Phầm Mềm 123AZ
+
+# Các tính năng sẽ bổ sung
+
+•	Bảng menu, màn hình chờ.
+
+•	Pause, Resume game
+
+•	Nhặt vật phẩm, Tim
+
+•	Update thời gian
+
+•	Cải thiện di chuyển của kẻ thù, tăng mức độ khó chịu của kẻ thù.
