@@ -52,3 +52,5 @@ Up (lên) – Down (Xuống) – Left (trái) – Right (Phải)
 •	Update thời gian
 
 •	Cải thiện di chuyển của kẻ thù, tăng mức độ khó chịu của kẻ thù.
+
+•	Vật thể cản trở di chuyển.
