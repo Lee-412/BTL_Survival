@@ -5,7 +5,7 @@
 # Mô tả chi tiết
 
 # Nhân vật
-•	
+•
 # Cách chơi
 •	Di chuyển nhân vật để tránh né khỏi các tác nhân gây hại, sóng sót lâu nhất có thể và nhận lấy phần thưởng cho bản thân mình. 
 •	Thao tác: các phím di chuyển 
