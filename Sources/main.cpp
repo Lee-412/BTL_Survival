@@ -6,7 +6,7 @@
 #include "Asteroid.h"
 #include<SDL_image.h>
 #include "ThreatsObj.h"
-const int number_of_asteroid = 20;
+
 MainObject charac_object;
 int x; int y;
 int x_v[3]; int y_v[3];
@@ -216,7 +216,7 @@ int main(int argc, char** argv)
     INIT::initSDL(window, renderer);
     SDL_RenderClear(renderer);
 
-    c_background =SDLF::loadimage("background.png");
+    c_background =SDLF::loadimage("backg1.png");
     c_character=SDLF::loadimage("charac.png");
 
     charac_object.SetRect(0,600);
@@ -227,7 +227,7 @@ int main(int argc, char** argv)
     for(int t=0; t<NUM_Threat; t++)
     {
         ThreatsObj* p_threat= (p_threats+t);
-        c_threat=SDLF::loadimage("threat.png");
+        c_threat=SDLF::loadimage("threat2.png");
         bool ret2= p_threat->Loadimg("threat.png");
         if(ret2==false){return 0;}
         p_threat->SetRect(SCREEN_WIDTH+t*400,SCREEN_HEIGHT*0.8);
